@@ -1,0 +1,828 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #0b1020;
+  color: #ffffff;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+  height: 72px;
+  padding: 0 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: #10172a;
+  border-bottom: 1px solid #202a42;
+
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  font-size: 21px;
+  font-weight: bold;
+}
+
+.logo b {
+  color: #6c63ff;
+}
+
+.logo-icon {
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #27235f;
+  border-radius: 10px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 35px;
+}
+
+.nav-links a {
+  color: #aeb7cc;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.nav-links a:hover {
+  color: white;
+}
+
+.nav-button,
+.hero-button {
+  text-decoration: none;
+  color: white;
+
+  background: #635bff;
+
+  padding: 11px 20px;
+  border-radius: 9px;
+
+  font-weight: bold;
+  font-size: 14px;
+}
+
+
+/* ================= HERO ================= */
+
+.hero {
+  max-width: 1200px;
+  margin: auto;
+
+  padding: 90px 30px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 60px;
+}
+
+.hero-content {
+  max-width: 700px;
+}
+
+.tag,
+.small-title {
+  color: #746cff;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+}
+
+.hero h1 {
+  font-size: 58px;
+  line-height: 1.05;
+  margin: 15px 0;
+}
+
+.hero h1 span {
+  color: #746cff;
+}
+
+.hero-text {
+  color: #9ca7bc;
+  font-size: 18px;
+  line-height: 1.7;
+
+  max-width: 620px;
+
+  margin-bottom: 35px;
+}
+
+.hero-card {
+  width: 270px;
+
+  background: #141d34;
+
+  border: 1px solid #28324d;
+  border-radius: 20px;
+
+  padding: 30px;
+
+  text-align: center;
+
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+}
+
+.hero-icon {
+  font-size: 40px;
+}
+
+.hero-card h3 {
+  color: #aab3c8;
+  margin-bottom: 5px;
+}
+
+.score {
+  font-size: 60px;
+  font-weight: bold;
+}
+
+.hero-card p {
+  color: #7f8ba3;
+}
+
+.progress {
+  height: 8px;
+  background: #252f47;
+  border-radius: 10px;
+}
+
+.progress div {
+  width: 86%;
+  height: 100%;
+  background: #635bff;
+  border-radius: 10px;
+}
+
+
+/* ================= STATS ================= */
+
+.stats {
+  max-width: 1200px;
+  margin: auto;
+
+  padding: 0 30px 50px;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 18px;
+}
+
+.stat-card {
+  background: #141d34;
+
+  border: 1px solid #26314c;
+  border-radius: 15px;
+
+  padding: 22px;
+
+  display: flex;
+  align-items: center;
+  gap: 17px;
+}
+
+.stat-icon {
+  width: 48px;
+  height: 48px;
+
+  background: #202a45;
+
+  border-radius: 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 22px;
+}
+
+.stat-card p {
+  color: #8792aa;
+  margin: 0;
+  font-size: 13px;
+}
+
+.stat-card h2 {
+  margin: 4px 0;
+}
+
+.stat-card span {
+  color: #6d67ff;
+  font-size: 12px;
+}
+
+
+/* ================= DASHBOARD ================= */
+
+.dashboard-grid {
+  max-width: 1200px;
+
+  margin: auto;
+  padding: 20px 30px 50px;
+
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+
+  gap: 22px;
+}
+
+.dashboard-card {
+  background: #141d34;
+
+  border: 1px solid #26314c;
+
+  border-radius: 18px;
+
+  padding: 28px;
+}
+
+.section-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 25px;
+}
+
+.section-title h2 {
+  margin: 5px 0 0;
+}
+
+.round-icon {
+  width: 45px;
+  height: 45px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #202a45;
+
+  border-radius: 12px;
+
+  font-size: 20px;
+}
+
+
+/* ================= MEAL ================= */
+
+.meal-list {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+.meal-item {
+  display: flex;
+  align-items: center;
+
+  gap: 15px;
+
+  padding: 14px;
+
+  background: #10182c;
+
+  border: 1px solid #222d46;
+
+  border-radius: 12px;
+}
+
+.meal-icon {
+  width: 45px;
+  height: 45px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #202a45;
+
+  border-radius: 10px;
+
+  font-size: 22px;
+}
+
+.meal-info {
+  flex: 1;
+}
+
+.meal-top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.meal-top h3 {
+  margin: 0;
+  font-size: 15px;
+}
+
+.meal-top span {
+  color: #6d67ff;
+  font-size: 11px;
+}
+
+.meal-info p {
+  margin: 6px 0 0;
+
+  color: #8792aa;
+  font-size: 13px;
+}
+
+.meal-item strong {
+  font-size: 12px;
+  color: #aab4c9;
+}
+
+
+/* ================= WORKOUT ================= */
+
+.workout-section {
+  max-width: 1200px;
+
+  margin: auto;
+  padding: 30px 30px 70px;
+}
+
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+
+  margin-bottom: 25px;
+}
+
+.section-heading h2 {
+  margin: 5px 0;
+  font-size: 28px;
+}
+
+.section-heading > span {
+  color: #8e99af;
+  font-size: 13px;
+}
+
+.workout-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 16px;
+}
+
+.workout-card {
+  background: #141d34;
+
+  border: 1px solid #26314c;
+
+  border-radius: 15px;
+
+  padding: 20px;
+
+  position: relative;
+}
+
+.workout-icon {
+  width: 45px;
+  height: 45px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #202a45;
+
+  border-radius: 10px;
+
+  font-size: 21px;
+
+  margin-bottom: 15px;
+}
+
+.workout-card h3 {
+  margin: 0 0 7px;
+}
+
+.workout-card p {
+  color: #8792aa;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.workout-card > span {
+  color: #6d67ff;
+  font-size: 12px;
+}
+
+
+/* ================= AI ================= */
+
+.ai-section {
+  max-width: 900px;
+
+  margin: 20px auto 100px;
+
+  padding: 40px;
+
+  background: linear-gradient(
+    145deg,
+    #171e3d,
+    #11172b
+  );
+
+  border: 1px solid #30385c;
+
+  border-radius: 22px;
+
+  text-align: center;
+}
+
+.ai-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 15px;
+}
+
+.ai-logo {
+  width: 55px;
+  height: 55px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #29245e;
+
+  border-radius: 15px;
+
+  font-size: 26px;
+}
+
+.ai-header h2 {
+  margin: 5px 0;
+}
+
+.ai-section > p {
+  color: #8e99af;
+
+  max-width: 600px;
+
+  margin: 20px auto 30px;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+
+  .nav-links {
+    display: none;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 42px;
+  }
+
+  .stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .workout-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .ai-section {
+    margin: 20px;
+  }
+}
+
+
+@media (max-width: 600px) {
+
+  .navbar {
+    padding: 0 20px;
+  }
+
+  .nav-button {
+    display: none;
+  }
+
+  .hero {
+    padding: 60px 20px;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .stats {
+    grid-template-columns: 1fr;
+    padding: 0 20px 30px;
+  }
+
+  .dashboard-grid {
+    padding: 20px;
+  }
+
+  .workout-section {
+    padding: 20px;
+  }
+
+  .workout-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ai-section {
+    padding: 25px 18px;
+  }
+}
+/* ================= BMI DESIGN ================= */
+
+.bmi-box {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.bmi-input {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.bmi-input label {
+  color: #aeb8d0;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.input-wrapper {
+  position: relative;
+}
+
+.input-wrapper input {
+  width: 100%;
+  padding: 14px 50px 14px 15px;
+
+  background: #0e162b;
+
+  border: 1px solid #2a3654;
+  border-radius: 10px;
+
+  color: white;
+
+  font-size: 14px;
+
+  outline: none;
+}
+
+.input-wrapper input:focus {
+  border-color: #6c63ff;
+}
+
+.input-wrapper span {
+  position: absolute;
+
+  right: 15px;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  color: #707d98;
+
+  font-size: 12px;
+}
+
+.calculate-button {
+  width: 100%;
+
+  padding: 14px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: #635bff;
+
+  color: white;
+
+  font-size: 14px;
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.calculate-button:hover {
+  transform: translateY(-1px);
+  opacity: 0.9;
+}
+
+.bmi-result {
+  margin-top: 5px;
+
+  padding: 18px;
+
+  background: #0e162b;
+
+  border: 1px solid #293553;
+
+  border-radius: 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.bmi-result p {
+  margin: 0;
+
+  color: #8995ad;
+
+  font-size: 12px;
+}
+
+.bmi-result h2 {
+  margin: 5px 0 0;
+
+  font-size: 32px;
+}
+
+.bmi-status {
+  padding: 8px 12px;
+
+  background: #24205b;
+
+  color: #8b84ff;
+
+  border-radius: 20px;
+
+  font-size: 12px;
+  font-weight: bold;
+}
+/* ================= AI CHAT ================= */
+
+.chat-box {
+  width: 100%;
+  max-width: 700px;
+
+  margin: auto;
+}
+
+.chat-input-area {
+  display: flex;
+
+  gap: 12px;
+
+  align-items: stretch;
+}
+
+.chat-input-area textarea {
+  flex: 1;
+
+  resize: none;
+
+  padding: 15px;
+
+  background: #0d1529;
+
+  border: 1px solid #2b3757;
+
+  border-radius: 12px;
+
+  color: white;
+
+  font-family: inherit;
+
+  font-size: 14px;
+
+  outline: none;
+}
+
+.chat-input-area textarea::placeholder {
+  color: #66738e;
+}
+
+.chat-input-area textarea:focus {
+  border-color: #6c63ff;
+}
+
+.chat-input-area button {
+  width: 120px;
+
+  border: none;
+
+  border-radius: 12px;
+
+  background: #635bff;
+
+  color: white;
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.chat-input-area button:hover {
+  transform: translateY(-1px);
+}
+
+.chat-input-area button:disabled {
+  opacity: 0.6;
+
+  cursor: not-allowed;
+}
+
+.ai-answer {
+  margin-top: 20px;
+
+  padding: 20px;
+
+  text-align: left;
+
+  background: #0d1529;
+
+  border: 1px solid #293553;
+
+  border-radius: 14px;
+}
+
+.answer-title {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  color: #8c85ff;
+
+  margin-bottom: 12px;
+}
+
+.ai-answer p {
+  margin: 0;
+
+  color: #aeb8cc;
+
+  line-height: 1.7;
+
+  white-space: pre-wrap;
+}
+
+
+/* MOBILE CHAT */
+
+@media (max-width: 600px) {
+
+  .chat-input-area {
+    flex-direction: column;
+  }
+
+  .chat-input-area button {
+    width: 100%;
+
+    padding: 13px;
+  }
+
+}
