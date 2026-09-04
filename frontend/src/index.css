@@ -109,3 +109,423 @@ code {
   padding: 4px 8px;
   background: var(--code-bg);
 }
+/* =========================================================
+   FINAL WEBSITE LAYOUT FIX
+   ========================================================= */
+
+/* Main standalone pages */
+
+.page-container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 40px 30px 80px;
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   DASHBOARD PREVIEW
+   ========================================================= */
+
+.dashboard-preview {
+  min-height: 100%;
+}
+
+
+/* Meal preview */
+
+.preview-meals {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+
+.preview-meal {
+  display: grid;
+  grid-template-columns: 48px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 14px;
+
+  padding: 14px;
+
+  background: #10182c;
+  border: 1px solid #222d46;
+  border-radius: 12px;
+}
+
+
+.preview-meal-icon {
+  width: 45px;
+  height: 45px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #202a45;
+  border-radius: 11px;
+
+  font-size: 22px;
+}
+
+
+.preview-meal h3 {
+  margin: 0 0 4px;
+  font-size: 15px;
+}
+
+
+.preview-meal p {
+  margin: 0;
+
+  color: #8799c0;
+  font-size: 13px;
+}
+
+
+.preview-meal > span {
+  color: #7165ff;
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+
+.view-all-button {
+  display: block;
+
+  margin-top: 18px;
+
+  text-align: center;
+
+  color: #7165ff;
+  text-decoration: none;
+
+  font-size: 14px;
+  font-weight: 700;
+}
+
+
+.view-all-button:hover {
+  text-decoration: underline;
+}
+
+
+/* =========================================================
+   DASHBOARD WORKOUT
+   ========================================================= */
+
+.dashboard-workout {
+  width: 100%;
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  padding: 35px 30px 60px;
+
+  box-sizing: border-box;
+}
+
+
+.dashboard-workout .section-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 30px;
+
+  margin-bottom: 25px;
+}
+
+
+.dashboard-workout .section-heading h2 {
+  margin: 5px 0 0;
+}
+
+
+.dashboard-workout .section-heading > span {
+  color: #91a3c8;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+
+.dashboard-workout-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 18px;
+}
+
+
+.dashboard-workout-card {
+  min-height: 205px;
+
+  padding: 22px;
+
+  background: #141d34;
+
+  border: 1px solid #26314c;
+
+  border-radius: 18px;
+
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+}
+
+
+.workout-preview-icon {
+  width: 50px;
+  height: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #202a45;
+
+  border-radius: 13px;
+
+  font-size: 25px;
+
+  margin-bottom: 18px;
+}
+
+
+.dashboard-workout-card h3 {
+  margin: 0 0 8px;
+
+  font-size: 18px;
+}
+
+
+.dashboard-workout-card p {
+  margin: 0;
+
+  color: #8799c0;
+
+  font-size: 13px;
+
+  line-height: 1.6;
+
+  flex: 1;
+}
+
+
+.dashboard-workout-card strong {
+  display: block;
+
+  margin-top: 18px;
+
+  color: #7165ff;
+
+  font-size: 15px;
+}
+
+
+.dashboard-workout-action {
+  display: flex;
+  justify-content: center;
+
+  margin-top: 25px;
+}
+
+
+/* =========================================================
+   DASHBOARD AI
+   ========================================================= */
+
+.dashboard-ai {
+  width: 100%;
+  max-width: 1200px;
+
+  margin: 0 auto 70px;
+
+  padding: 30px;
+
+  background: #151e3a;
+
+  border: 1px solid #2b3a63;
+
+  border-radius: 20px;
+
+  display: grid;
+
+  grid-template-columns: auto minmax(0, 1fr) auto;
+
+  align-items: center;
+
+  gap: 22px;
+
+  box-sizing: border-box;
+}
+
+
+.dashboard-ai-icon {
+  width: 62px;
+  height: 62px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #292261;
+
+  border-radius: 17px;
+
+  font-size: 30px;
+}
+
+
+.dashboard-ai h2 {
+  margin: 4px 0 6px;
+}
+
+
+.dashboard-ai p:not(.small-title) {
+  margin: 0;
+
+  color: #91a3c8;
+
+  line-height: 1.6;
+}
+
+
+.dashboard-ai .primary-btn {
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+
+/* =========================================================
+   FULL AI PAGE
+   ========================================================= */
+
+.assistant-page {
+  width: 100%;
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  padding: 60px 30px 100px;
+
+  box-sizing: border-box;
+}
+
+
+.assistant-page .ai-section {
+  margin: 0;
+}
+
+
+/* =========================================================
+   PREVENT FULL COMPONENTS FROM BEING CONSTRAINED
+   ========================================================= */
+
+.page-container .meal-page,
+.page-container .workout-page {
+  width: 100%;
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+  .dashboard-workout-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+
+  .dashboard-ai {
+    grid-template-columns: auto minmax(0, 1fr);
+  }
+
+
+  .dashboard-ai .primary-btn {
+    grid-column: 1 / -1;
+    justify-self: start;
+  }
+
+}
+
+
+@media (max-width: 700px) {
+
+  .page-container {
+    padding: 25px 18px 60px;
+  }
+
+
+  .dashboard-workout {
+    padding: 25px 18px 50px;
+  }
+
+
+  .dashboard-workout .section-heading {
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 8px;
+  }
+
+
+  .dashboard-workout-grid {
+    grid-template-columns: 1fr;
+  }
+
+
+  .preview-meal {
+    grid-template-columns: 45px minmax(0, 1fr);
+
+    align-items: start;
+  }
+
+
+  .preview-meal > span {
+    grid-column: 2;
+  }
+
+
+  .dashboard-ai {
+    grid-template-columns: 1fr;
+
+    margin: 0 18px 50px;
+
+    width: auto;
+
+    padding: 25px;
+  }
+
+
+  .dashboard-ai-icon {
+    width: 55px;
+    height: 55px;
+  }
+
+
+  .dashboard-ai .primary-btn {
+    grid-column: auto;
+
+    width: 100%;
+  }
+
+
+  .assistant-page {
+    padding: 35px 18px 70px;
+  }
+
+}

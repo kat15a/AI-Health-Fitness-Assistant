@@ -826,3 +826,707 @@ body {
   }
 
 }
+
+/* =========================================================
+   MEAL PLAN + WORKOUT PLAN
+   Functional page styles
+   ========================================================= */
+
+.meal-page,
+.workout-page {
+  padding: 40px 36px 80px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.meal-page .page-header,
+.workout-page .page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 30px;
+}
+
+.meal-page .section-label,
+.workout-page .section-label {
+  color: #7567ff;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  margin-bottom: 10px;
+}
+
+.meal-page .page-header h1,
+.workout-page .page-header h1 {
+  font-size: 36px;
+  margin: 0 0 10px;
+}
+
+.meal-page .page-description,
+.workout-page .page-description {
+  color: #94a3c7;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.meal-badge {
+  width: 58px;
+  height: 58px;
+  background: #202b49;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+}
+
+.meal-page .meal-controls,
+.workout-page .workout-controls {
+  background: #111a31;
+  border: 1px solid #263354;
+  border-radius: 18px;
+  padding: 24px;
+  display: flex;
+  align-items: flex-end;
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+.meal-page .control-group,
+.workout-page .control-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+
+.meal-page .control-group label,
+.workout-page .control-group label {
+  color: #a9b7d8;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.meal-page .control-group select,
+.workout-page .control-group select {
+  height: 50px;
+  padding: 0 16px;
+  background: #0c1427;
+  color: white;
+  border: 1px solid #2b3a60;
+  border-radius: 10px;
+  font-size: 15px;
+  outline: none;
+}
+
+.meal-page .control-group select:focus,
+.workout-page .control-group select:focus {
+  border-color: #6557ff;
+}
+
+.meal-page .bmi-info,
+.workout-page .bmi-info {
+  min-width: 140px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.meal-page .bmi-info span,
+.workout-page .bmi-info span {
+  color: #8ea1c8;
+  font-size: 13px;
+}
+
+.meal-page .bmi-info strong,
+.workout-page .bmi-info strong {
+  font-size: 24px;
+  color: white;
+}
+
+.meal-page .bmi-info small,
+.workout-page .bmi-info small {
+  color: #7567ff;
+}
+
+.meal-page .primary-btn,
+.meal-page .secondary-btn,
+.workout-page .primary-btn,
+.workout-page .secondary-btn {
+  height: 50px;
+  padding: 0 24px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 700;
+  transition: 0.2s;
+  white-space: nowrap;
+}
+
+.meal-page .primary-btn,
+.workout-page .primary-btn {
+  background: #6357ff;
+  color: white;
+}
+
+.meal-page .primary-btn:hover,
+.workout-page .primary-btn:hover {
+  background: #756aff;
+  transform: translateY(-1px);
+}
+
+.meal-page .secondary-btn,
+.workout-page .secondary-btn {
+  background: #202b49;
+  color: #b9c5e2;
+  border: 1px solid #334265;
+}
+
+.meal-page .secondary-btn:hover,
+.workout-page .secondary-btn:hover {
+  background: #293657;
+}
+
+.meal-page .success-message {
+  background: rgba(40, 200, 130, 0.1);
+  border: 1px solid rgba(40, 200, 130, 0.3);
+  color: #6ee7b7;
+  padding: 15px 18px;
+  border-radius: 12px;
+  margin-bottom: 24px;
+}
+
+.meal-page .meal-summary {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 35px;
+}
+
+.meal-page .meal-summary > div {
+  background: #111a31;
+  border: 1px solid #263354;
+  border-radius: 14px;
+  padding: 20px;
+}
+
+.meal-page .meal-summary span {
+  display: block;
+  color: #788ab2;
+  font-size: 12px;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+
+.meal-page .meal-summary strong {
+  font-size: 19px;
+  color: white;
+}
+
+.meal-page .meal-plan-header {
+  margin-bottom: 20px;
+}
+
+.meal-page .meal-plan-header h2 {
+  margin: 0 0 8px;
+  font-size: 26px;
+}
+
+.meal-page .meal-plan-header p {
+  color: #91a3c8;
+}
+
+.meal-page .meal-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.meal-page .meal-card {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  background: #111a31;
+  border: 1px solid #263354;
+  border-radius: 16px;
+  padding: 20px;
+  transition: 0.2s;
+}
+
+.meal-page .meal-card:hover {
+  border-color: #5147d9;
+  transform: translateY(-2px);
+}
+
+.meal-page .meal-icon {
+  width: 54px;
+  height: 54px;
+  background: #202b49;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  flex-shrink: 0;
+}
+
+.meal-page .meal-content {
+  flex: 1;
+}
+
+.meal-page .meal-title-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.meal-page .meal-title-row h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.meal-page .meal-title-row span {
+  color: #7165ff;
+  font-size: 13px;
+}
+
+.meal-page .meal-content p {
+  color: #8ea1c8;
+  margin: 8px 0 0;
+}
+
+.meal-page .meal-calories {
+  text-align: right;
+  min-width: 70px;
+}
+
+.meal-page .meal-calories strong {
+  display: block;
+  color: white;
+  font-size: 17px;
+}
+
+.meal-page .meal-calories span {
+  color: #7f91b8;
+  font-size: 12px;
+}
+
+.meal-page .nutrition-tip {
+  margin-top: 28px;
+  padding: 20px;
+  border-radius: 14px;
+  background: #151f39;
+  border: 1px solid #28365a;
+  display: flex;
+  gap: 15px;
+}
+
+.meal-page .nutrition-tip > span {
+  font-size: 25px;
+}
+
+.meal-page .nutrition-tip strong {
+  color: white;
+}
+
+.meal-page .nutrition-tip p {
+  color: #91a3c8;
+  margin: 5px 0 0;
+}
+
+
+/* =========================================================
+   WORKOUT PAGE
+   ========================================================= */
+
+.workout-page .workout-header {
+  align-items: center;
+}
+
+.workout-page .workout-stats {
+  color: #91a3c8;
+}
+
+.workout-page .workout-stats strong {
+  color: white;
+  font-size: 17px;
+}
+
+.workout-page .workout-progress {
+  background: #111a31;
+  border: 1px solid #263354;
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 25px;
+}
+
+.workout-page .progress-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.workout-page .progress-header span {
+  color: #a7b5d4;
+}
+
+.workout-page .progress-header strong {
+  color: #7567ff;
+}
+
+.workout-page .progress-bar {
+  width: 100%;
+  height: 9px;
+  background: #263354;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.workout-page .progress-fill {
+  height: 100%;
+  background: #6557ff;
+  border-radius: 20px;
+  transition: width 0.4s ease;
+}
+
+.workout-page .workout-progress p {
+  color: #7385ac;
+  font-size: 13px;
+  margin-bottom: 0;
+}
+
+.workout-page .workout-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.workout-page .workout-card {
+  background: #111a31;
+  border: 1px solid #263354;
+  border-radius: 18px;
+  padding: 22px;
+  min-height: 240px;
+  transition: 0.25s;
+  display: flex;
+  flex-direction: column;
+}
+
+.workout-page .workout-card:hover {
+  transform: translateY(-4px);
+  border-color: #5147d9;
+}
+
+.workout-page .workout-card.completed {
+  border-color: #32c98a;
+  background: #111e2d;
+}
+
+.workout-page .workout-icon {
+  width: 52px;
+  height: 52px;
+  background: #202b49;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  margin-bottom: 25px;
+}
+
+.workout-page .workout-card-content {
+  flex: 1;
+}
+
+.workout-page .workout-card-title {
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+  align-items: center;
+}
+
+.workout-page .workout-card h3 {
+  font-size: 21px;
+  margin: 0;
+}
+
+.workout-page .workout-card p {
+  color: #8799c0;
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 10px 0;
+}
+
+.workout-page .complete-badge {
+  color: #5ee0a5;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.workout-page .workout-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.workout-page .workout-bottom > span {
+  color: #7165ff;
+  font-weight: 700;
+}
+
+.workout-page .complete-btn,
+.workout-page .completed-btn {
+  border: none;
+  border-radius: 8px;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.workout-page .complete-btn {
+  background: #6357ff;
+  color: white;
+}
+
+.workout-page .completed-btn {
+  background: #174a38;
+  color: #63e6a8;
+}
+
+.workout-page .workout-finished {
+  margin-top: 25px;
+  background: rgba(40, 200, 130, 0.1);
+  border: 1px solid rgba(40, 200, 130, 0.3);
+  color: #6ee7b7;
+  border-radius: 14px;
+  padding: 18px;
+  text-align: center;
+  font-weight: 700;
+}
+
+.workout-page .coach-card {
+  margin-top: 50px;
+  padding: 35px;
+  background: #151e3a;
+  border: 1px solid #2b3a63;
+  border-radius: 22px;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.workout-page .coach-icon {
+  width: 65px;
+  height: 65px;
+  border-radius: 18px;
+  background: #292261;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  flex-shrink: 0;
+}
+
+.workout-page .coach-card h2 {
+  margin: 0 0 8px;
+}
+
+.workout-page .coach-card p {
+  color: #91a3c8;
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   MEAL + WORKOUT RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1000px) {
+  .workout-page .workout-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .meal-page .meal-summary {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .meal-page .meal-summary > div:first-child {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 700px) {
+  .meal-page,
+  .workout-page {
+    padding: 25px 18px 60px;
+  }
+
+  .meal-page .page-header,
+  .workout-page .page-header {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .meal-page .meal-controls,
+  .workout-page .workout-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .meal-page .meal-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .meal-page .meal-summary > div:first-child {
+    grid-column: auto;
+  }
+
+  .workout-page .workout-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .meal-page .meal-card {
+    align-items: flex-start;
+  }
+
+  .meal-page .meal-title-row {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .meal-page .meal-calories {
+    min-width: 55px;
+  }
+
+  .workout-page .coach-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+/* =========================================================
+   AI ASSISTANT PAGE - FINAL LAYOUT
+   ========================================================= */
+
+.assistant-page {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 70px 36px 80px;
+  box-sizing: border-box;
+}
+
+.assistant-page .ai-section {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 52px 60px;
+  box-sizing: border-box;
+
+  background: #151d38;
+  border: 1px solid #29375d;
+  border-radius: 24px;
+
+  text-align: center;
+}
+
+/* AI header */
+
+.assistant-page .ai-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.assistant-page .ai-logo {
+  width: 64px;
+  height: 64px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #30236f;
+  border-radius: 18px;
+
+  font-size: 34px;
+  flex-shrink: 0;
+}
+
+.assistant-page .ai-header > div:last-child {
+  text-align: left;
+}
+
+.assistant-page .ai-header .small-title {
+  margin: 0 0 6px;
+}
+
+.assistant-page .ai-header h2 {
+  margin: 0;
+  font-size: 30px;
+  line-height: 1.2;
+}
+
+/* Description */
+
+.assistant-page .ai-section > p {
+  max-width: 760px;
+  margin: 0 auto 38px;
+
+  color: #91a7d8;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* Chat */
+
+.assistant-page .ai-section .chat-container,
+.assistant-page .ai-section .chat-box {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Chat input area */
+
+.assistant-page textarea,
+.assistant-page input {
+  font-family: inherit;
+  font-size: 16px;
+}
+
+.assistant-page textarea {
+  min-height: 100px;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .assistant-page {
+    padding: 40px 20px 60px;
+  }
+
+  .assistant-page .ai-section {
+    padding: 40px 24px;
+  }
+
+  .assistant-page .ai-header {
+    flex-direction: column;
+  }
+
+  .assistant-page .ai-header > div:last-child {
+    text-align: center;
+  }
+
+  .assistant-page .ai-header h2 {
+    font-size: 26px;
+  }
+
+  .assistant-page .ai-section > p {
+    font-size: 16px;
+  }
+}

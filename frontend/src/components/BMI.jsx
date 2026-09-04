@@ -1,36 +1,41 @@
 import { useState } from "react";
 
 function BMI() {
-
   const [height, setHeight] = useState("");
   const [weight, setWeight] = useState("");
   const [bmi, setBmi] = useState(null);
 
   const calculateBMI = () => {
-
     if (!height || !weight) {
       return;
     }
 
-    const heightMeter = Number(height) / 100;
+    const heightInMeters = Number(height) / 100;
 
-    const result =
-      Number(weight) / (heightMeter * heightMeter);
+    const calculatedBMI =
+      Number(weight) / (heightInMeters * heightInMeters);
 
-    setBmi(result.toFixed(1));
+    const roundedBMI = calculatedBMI.toFixed(1);
+
+    // Show BMI on the screen
+    setBmi(roundedBMI);
+
+    // Save BMI so Meal and Workout pages can use it
+    localStorage.setItem("bmi", roundedBMI);
   };
 
   const getStatus = () => {
+    const numericBMI = Number(bmi);
 
-    if (bmi < 18.5) {
+    if (numericBMI < 18.5) {
       return "Underweight";
     }
 
-    if (bmi < 25) {
+    if (numericBMI < 25) {
       return "Healthy";
     }
 
-    if (bmi < 30) {
+    if (numericBMI < 30) {
       return "Overweight";
     }
 
@@ -40,8 +45,8 @@ function BMI() {
   return (
     <div className="bmi-box">
 
+      {/* Height */}
       <div className="bmi-input">
-
         <label>Height</label>
 
         <div className="input-wrapper">
@@ -54,12 +59,10 @@ function BMI() {
 
           <span>cm</span>
         </div>
-
       </div>
 
-
+      {/* Weight */}
       <div className="bmi-input">
-
         <label>Weight</label>
 
         <div className="input-wrapper">
@@ -72,10 +75,9 @@ function BMI() {
 
           <span>kg</span>
         </div>
-
       </div>
 
-
+      {/* Calculate Button */}
       <button
         className="calculate-button"
         onClick={calculateBMI}
@@ -83,7 +85,7 @@ function BMI() {
         Calculate BMI
       </button>
 
-
+      {/* BMI Result */}
       {bmi && (
         <div className="bmi-result">
 
