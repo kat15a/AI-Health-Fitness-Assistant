@@ -1,4 +1,4 @@
-# 🏋️ AI Health & Fitness Assistant
+# 🏋️ AI Health & Fitness Assistant(HealthFit AI)
 
 An AI-powered health and fitness web application that helps users track their BMI, generate personalized meal plans, follow workout routines, and interact with an AI fitness assistant.
 
