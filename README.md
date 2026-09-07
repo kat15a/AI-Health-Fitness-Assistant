@@ -110,7 +110,7 @@ AI-Health-Fitness-Assistant/
 │       ├── src/
 │       │   └── main/
 │       │       ├── java/
-│       │       │   └── ...
+│       │       │   └── ..
 │       │       │
 │       │       └── resources/
 │       │           └── application.properties
