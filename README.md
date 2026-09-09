@@ -24,7 +24,7 @@ The application combines a modern React frontend with a Spring Boot backend and 
   - Vegetarian
   - Non-Vegetarian
 - Displays recommended meals and calorie information.
-- Provides nutrition tips.
+- Provides nutrition tip.
 
 ### 🏋️ Workout Planner
 - Personalized workout recommendations.
